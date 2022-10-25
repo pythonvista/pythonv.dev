@@ -54,7 +54,7 @@ export default {
 
 }
 
-.v-toolbar__content{
+.v-toolbar__content, .v-toolbar__extension{
    width: 100% !important;
 }
 
