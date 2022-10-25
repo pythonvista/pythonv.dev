@@ -1,6 +1,6 @@
 <template>
     <v-app-bar app light
-        class="nav px-2 elevation-0 border-bottoms flex  items-center bg-white ">
+        class="nav px-2 elevation-0 border-bottoms flex w-full justify-between items-center bg-white ">
         <div class="nav-wrap w-full flex sm:justify-evenly items-center md:justify-evenly lg:justify-evenly">
 
             <div class=" h-full flex w-full py-2 justify-start align-center logo">
