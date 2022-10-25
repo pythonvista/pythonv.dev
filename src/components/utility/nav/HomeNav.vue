@@ -50,11 +50,12 @@ export default {
     background-color: white !important;
     /* min-height: 12vh !important; */
     overflow: hidden;
+    width: 100% !important;
 
 }
 
 v-toolbar__content{
-    height: 100% !important;
+   width: 100% !important;
 }
 
 .nav-wrap{
