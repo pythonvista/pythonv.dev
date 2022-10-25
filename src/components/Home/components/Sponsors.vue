@@ -3,7 +3,7 @@
     <div class="sponsor_title">
         <p class="ma-0 pa-0 text-white">Our Company and Sponsors</p>
     </div>
-    <div  class="sponsors_img flex xs:flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-center xs:gap-5 md:gap-5">
+    <div   class="sponsors_img flex xs:flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-center xs:gap-5 md:gap-5">
         <img  src="@/assets/img/companyLogo/nablintech.png" alt="">
         <img src="@/assets/img/companyLogo/carbonwurld.png" alt="">
         <img src="@/assets/img/companyLogo/kinplus.png" alt="">

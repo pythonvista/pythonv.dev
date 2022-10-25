@@ -1,5 +1,6 @@
 import './assets/tailwind.css';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'vue-material-design-icons/styles.css';
 
 import Vue from 'vue';
 
