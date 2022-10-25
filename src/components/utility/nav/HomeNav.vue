@@ -1,7 +1,7 @@
 <template>
     <v-app-bar app light style="width:100% !imporatnt"
         class="nav px-2 elevation-0 border-bottoms flex justify-between items-center bg-white ">
-        <div style="width:100% !imporatnt" class="nav-wrap flex sm:justify-evenly items-center md:justify-evenly lg:justify-evenly">
+        <div class="nav-wrap flex sm:justify-evenly items-center align-center w-full md:justify-evenly lg:justify-evenly">
 
             <div class=" h-full flex w-full py-2 justify-start align-center logo">
                 <img class="w-10"  src="@/assets/img/logo.png">
