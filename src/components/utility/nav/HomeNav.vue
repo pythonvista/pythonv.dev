@@ -59,6 +59,7 @@ v-toolbar__content{
 
 .nav-wrap{
     height: 100%;
+    width: 100% !important;
 }
 
 .logo {
