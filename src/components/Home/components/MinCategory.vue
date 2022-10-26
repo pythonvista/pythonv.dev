@@ -88,7 +88,7 @@ export default {
 
 <style scoped>
 .category_wrap {
-    min-height: 65vh ;
+    min-height: 50vh ;
     /* display: flex;
     justify-content: start;
     align-items: center;  */
@@ -223,7 +223,7 @@ select option {
 }
 @media (max-width: 640px) {
     .category_wrap {
-        min-height: 55vh;
+        min-height: 40vh;
         display: flex;
         justify-content: center;
         align-items: center;

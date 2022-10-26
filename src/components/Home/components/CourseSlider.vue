@@ -75,12 +75,18 @@ export default {
 
         setSize() {
             let currWidth = window.screen.width
-            if (currWidth > 768) {
+            if (currWidth <= 640)  {
+                this.size = 1
+            }else if(currWidth >=640 && currWidth <= 820) {
+                this.size = 2
+            }else if(currWidth >=820 && currWidth <= 920){
+                this.size = 3
+            }else{
                 this.size = 4
             }
-            if (currWidth <= 640) {
-                this.size = 1
-            }
+
+           
+            
         }
     },
     created() {

@@ -159,13 +159,52 @@ export default {
     width: 100%; */
     top: 0;
     left: 0;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .wavemob {
     display: none;
+}
+
+@media (max-width: 950px) {
+    .hero {
+        min-height: 32vh;
+        overflow: hidden;
+        position: relative;
+
+    }
+
+    .search_input {
+        width: 70%;
+        outline: none;
+        padding: 0.3em 0;
+
+    }
+
+    .title_text{
+        font-size: 1.6rem !important;
+        line-height: 2.2rem !important;
+    }
+
+    .search_wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid red; */
+    }
+
+    .search_btn {
+        background: #60109E !important;
+        color: white;
+        height: 100% !important;
+        border-radius: 0 !important;
+        /* display: block; */
+        margin: 0;
+        padding: 0;
+
+    }
 }
 
 @media (max-width: 640px) {
@@ -180,7 +219,7 @@ export default {
         width: 100%;
         outline: none;
         padding: 0.2em 0;
-        border-radius:6px ;
+        border-radius: 6px;
 
     }
 

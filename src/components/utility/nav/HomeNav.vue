@@ -13,7 +13,7 @@
                 <router-link :to="{name: 'courses'}"><p class="text-primary ma-0 text-base font-bold">School & Cohorts</p></router-link>
             </div>
             <div class="w-full hidden sm:hidden md:flex md:justify-end auth">
-                <v-btn x-small depressed color="#60109E" class="btn_hover">
+                <v-btn  small depressed color="#60109E" class="btn_hover">
                     <p class="ma-0 pa-0 ">Get Started</p>
                    
                 </v-btn>
