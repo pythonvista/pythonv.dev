@@ -4,7 +4,6 @@
     <Sponsors></Sponsors>
     <MinCategory></MinCategory>
     <CourseSlider></CourseSlider>
-    
   </div>
 </template>
 
