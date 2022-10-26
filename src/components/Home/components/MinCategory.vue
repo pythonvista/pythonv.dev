@@ -1,20 +1,21 @@
 <template>
     <div class="category_wrap px-7 py-3 ">
+        <img class="wave" src="@/assets/img/bg-right.svg" alt="">
+        <img class="wavemob" src="@/assets/img/bgmob-right.svg" alt="">
         <div class="category_title flex flex-column ">
-            <p class="text-primary font-medium text-sm ma-0 pa-0 xs:text-center sm:text-center md:text-left lg:text-left ">Popular Category</p>
             <div class="relative gap-3 mt-2 mb-2 flex xs:flex-col sm:flex-col md:flex-row lg:flex-row align-center">
-                <p class="font-bold   ma-0 pa-0">Popular Category For Learning</p>
+                <p class="font-bold text-primary ma-0 pa-0">Popular Category For Learning</p>
 
                 <select
-                    class=" text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    class="text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="kndslld">
-                    <option v-for="(items,index) in categoryItems" :value="items" :key="index">{{items}} </option>
+                    <option v-for="(items, index) in categoryItems" :value="items" :key="index">{{ items }} </option>
                 </select>
 
             </div>
             <div
-                class="xs:hidden category_md_lg py-4 px-3 sm:hidden md:grid lg:grid gap-3 md:grid-cols-3 lg:grid-cols-6 place-items-center content-center">
-                <div class="category_items hover:bg-primary grid-cols-1  card shadow-lg ">
+                class="xs:hidden category_md_lg py-4 px-3 mt-5 mb-6 sm:hidden md:grid lg:grid gap-3 md:grid-cols-3 lg:grid-cols-6 place-items-center content-center">
+                <div  v-for="(n, index) in 6" :key="index" class="category_items hover:bg-primary grid-cols-1  card shadow-lg ">
                     <div class="circle flex align-center flex-column justify-center items-center">
                         <v-icon color="black">mdi-account</v-icon>
 
@@ -22,116 +23,21 @@
                     <p class="ma-0 pa-0 font-bold">Computer
                         Programing</p>
                     <p class="ma-0 pa-0 font-normal text-sm">5 courses</p>
-                </div>
-                <div class="category_items grid-cols-1 card shadow-lg ">
-                    <div class="circle flex align-center flex-column justify-center items-center">
-                        <v-icon color="black">mdi-account</v-icon>
-
-                    </div>
-                    <p class="ma-0 pa-0 font-bold">Computer
-                        Programing</p>
-                    <p class="ma-0 pa-0 font-normal text-sm">5 courses</p>
-
-                </div>
-                <div class="category_items grid-cols-1 card shadow-lg">
-                    <div class="circle bg-white flex align-center flex-column justify-center items-center">
-                        <v-icon color="black">mdi-account</v-icon>
-
-                    </div>
-                    <p class="ma-0 pa-0 font-bold ">Computer
-                        Programing</p>
-                    <p class="ma-0 pa-0 font-normal text-sm ">5 courses</p>
-
-                </div>
-                <div class="category_items grid-cols-1 card shadow-lg ">
-                    <div class="circle flex align-center flex-column justify-center items-center">
-                        <v-icon color="black">mdi-account</v-icon>
-
-                    </div>
-                    <p class="ma-0 pa-0 font-bold">Computer
-                        Programing</p>
-                    <p class="ma-0 pa-0 font-normal text-sm">5 courses</p>
-
-                </div>
-                <div class="category_items grid-cols-1 card shadow-lg ">
-                    <div class="circle flex align-center flex-column justify-center items-center">
-                        <v-icon color="black">mdi-account</v-icon>
-
-                    </div>
-                    <p class="ma-0 pa-0 font-bold">Computer
-                        Programing</p>
-                    <p class="ma-0 pa-0 font-normal text-sm">5 courses</p>
-
-                </div>
-                <div class="category_items grid-cols-1 card shadow-lg ">
-                    <div class="circle flex align-center flex-column justify-center items-center">
-                        <v-icon color="black">mdi-account</v-icon>
-
-                    </div>
-                    <p class="ma-0 pa-0 font-bold">Computer
-                        Programing</p>
-                    <p class="ma-0 pa-0 font-normal text-sm">5 courses</p>
-
                 </div>
             </div>
-            <div class="xs:flex sm:flex md:hidden lg:hidden mt-3 mb-2">
+            <div class="xs:flex sm:flex md:hidden lg:hidden md:mt-6 lg:mt7 mb-2">
                 <div ref="swiper" class="swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide category_items hover:bg-primary grid-cols-1  card shadow-lg ">
+                        <div  v-for="(n, index) in 9" :key="index" class="swiper-slide category_items hover:bg-primary grid-cols-1  card shadow-lg ">
                             <div class="circle flex align-center flex-column justify-center items-center">
                                 <v-icon color="black">mdi-account</v-icon>
 
                             </div>
                             <p class="ma-0 pa-0 p1 font-bold text-base  ">Computer
                                 Programing</p>
-                            <p class="ma-0 pa-0 p2 font-normal text-sm ">5 courses</p>
-                        </div>
-                        <div class="swiper-slide category_items hover:bg-primary grid-cols-1  card shadow-lg ">
-                            <div class="circle flex align-center flex-column justify-center items-center">
-                                <v-icon color="black">mdi-account</v-icon>
-
-                            </div>
-                            <p class="ma-0 pa-0 p1 font-bold text-base  ">Computer
-                                Programing</p>
-                            <p class="ma-0 pa-0 p2 font-normal text-sm ">5 courses</p>
-                        </div>
-                        <div class="swiper-slide category_items hover:bg-primary grid-cols-1  card shadow-lg ">
-                            <div class="circle flex align-center flex-column justify-center items-center">
-                                <v-icon color="black">mdi-account</v-icon>
-
-                            </div>
-                            <p class="ma-0 pa-0 p1 font-bold text-base  ">Computer
-                                Programing</p>
-                            <p class="ma-0 pa-0 p2 font-normal text-sm ">5 courses</p>
-                        </div>
-                        <div class="swiper-slide category_items hover:bg-primary grid-cols-1  card shadow-lg ">
-                            <div class="circle flex align-center flex-column justify-center items-center">
-                                <v-icon color="black">mdi-account</v-icon>
-
-                            </div>
-                            <p class="ma-0 pa-0 p1 font-bold text-base  ">Computer
-                                Programing</p>
-                            <p class="ma-0 pa-0 p2 font-normal text-sm ">5 courses</p>
-                        </div>
-                        <div class="swiper-slide category_items hover:bg-primary grid-cols-1  card shadow-lg ">
-                            <div class="circle flex align-center flex-column justify-center items-center">
-                                <v-icon color="black">mdi-account</v-icon>
-
-                            </div>
-                            <p class="ma-0 pa-0 p1 font-bold text-base  ">Computer
-                                Programing</p>
-                            <p class="ma-0 pa-0 p2 font-normal text-sm ">5 courses</p>
-                        </div>
-                        <div class="swiper-slide category_items hover:bg-primary grid-cols-1  card shadow-lg ">
-                            <div class="circle flex align-center flex-column justify-center items-center">
-                                <v-icon color="black">mdi-account</v-icon>
-
-                            </div>
-                            <p class="ma-0 pa-0 p1 font-bold text-base  ">Computer
-                                Programing</p>
-                            <p class="ma-0 pa-0 p2 font-normal text-sm ">5 courses</p>
+                            <p class="ma-0 pa-0 p2 font-normal text-sm ">{{index + 12}} courses</p>
                         </div>
                     </div>
                     <!-- If we need pagination -->
@@ -147,7 +53,7 @@
             </div>
 
             <a href="#" style="color:#60109E;"
-                class="text-primary text-center font-medium text-sm ma-0 pa-0 underline mt-2 ">Explore all
+                class="text-primary all-c text-center font-medium text-sm ma-0 pa-0 underline mt-2 ">Explore all
                 categories</a>
         </div>
     </div>
@@ -181,6 +87,17 @@ export default {
 </script>
 
 <style scoped>
+.category_wrap {
+    min-height: 65vh ;
+    /* display: flex;
+    justify-content: start;
+    align-items: center;  */
+    border-bottom: 4px solid #60109E;
+    position: relative;
+    overflow: hidden;
+    background: #f9f9f9;
+}
+
 select {
     outline: none;
     border-bottom: 1px solid #60109E;
@@ -199,6 +116,12 @@ select option {
     padding: 0 5px !important;
 
 }
+.category_title {
+    z-index: 2;
+}
+.all-c{
+    z-index: 2 !important;
+}
 
 .category_items {
     max-width: 130px;
@@ -214,6 +137,7 @@ select option {
     line-height: 1rem;
     transition: 0.5s;
     color: black !important;
+    z-index: 2;
 }
 
 .category_items:hover {
@@ -278,5 +202,53 @@ select option {
 
 .swiper-button-next {
     display: none !important;
+}
+
+.swiper-pagination,
+.swiper-pagination-bullets,
+.swiper-pagination-horizontal {
+    display: none !important;
+}
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.wavemob {
+    display: none;
+}
+@media (max-width: 640px) {
+    .category_wrap {
+        min-height: 55vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 4px solid #60109E;
+    }
+
+    .wave {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        display: none;
+    }
+
+    .wavemob {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        /* height: 100%; */
+        z-index: 0;
+    }
+
 }
 </style>
