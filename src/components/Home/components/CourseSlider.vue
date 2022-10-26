@@ -3,11 +3,18 @@
         <img class="wave" src="@/assets/img/bg.svg" alt="">
         <img class="wavemob" src="@/assets/img/course-bg.svg" alt="">
         <div class="category_title flex flex-column ">
-            <!-- <p
-                class="text-primary font-medium text-sm ma-0 pa-0 xs:text-center sm:text-center md:text-left lg:text-left ">
-                Popular Category</p> -->
-            <div class="relative gap-3 mt-2 mb-2 flex xs:flex-col sm:flex-col md:flex-row lg:flex-row align-center">
-                <p class="font-bold   ma-0 pa-0">Popular Courses</p>
+
+            <div
+                class="relative  gap-3 mt-2 mb-2 flex xs:flex-col sm:flex-col md:flex-row lg:flex-row md:justify-between align-center">
+                <p class="font-bold  ma-0 pa-0">Popular Courses</p>
+                <div class="flex gap-2">
+                    <v-btn  @click="filterCourse('all')" class="btnc" :class="{ selected: isSelected == 'all', notSelected: isSelected != 'all' }" depressed
+                        x-small>All</v-btn>
+                    <v-btn  @click="filterCourse('courses')" class="btnc" :class="{ selected: isSelected == 'courses', notSelected: isSelected != 'courses' }" depressed
+                        x-small>Courses</v-btn>
+                    <v-btn  @click="filterCourse('cohorts')" class="btnc" :class="{selected: isSelected == 'cohorts', notSelected: isSelected != 'cohorts' }"  depressed x-small>Cohorts</v-btn>
+                    <v-btn @click="filterCourse('degree')" class="btnc" :class="{selected: isSelected == 'degree', notSelected: isSelected != 'degree' }"  depressed x-small>Degree</v-btn>
+                </div>
             </div>
         </div>
         <div ref="swiper" class="swiper">
@@ -15,7 +22,8 @@
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide" v-for="(n, index) in 9" :key="index">
-                    <div class="shadow-lg bg-white focus-within:shadow-md hover:shadow-2xl course_slide flex items-center flex-col ">
+                    <div
+                        class="shadow-lg bg-white focus-within:shadow-md hover:shadow-2xl course_slide flex items-center flex-col ">
                         <div class="course_img w-full">
                             <img src="@/assets/img/course1.png" alt="">
                         </div>
@@ -30,17 +38,19 @@
                                     <div class="avatar">
                                         <img src="@/assets/img/avatar.png" alt="">
                                     </div>
-                                    <div class="avatar_name"><p class="ma-0 pa-0 text-xs">Emeter Victor</p></div>
+                                    <div class="avatar_name">
+                                        <p class="ma-0 pa-0 text-xs">Emeter Victor</p>
+                                    </div>
                                 </div>
 
                                 <div class="price flex items-center justify-center">
-                                    <span class="text-primary">₦{{5000}}</span>
+                                    <span class="text-primary">₦{{ 5000 }}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-               
+
             </div>
             <!-- If we need pagination -->
             <!-- <div class="swiper-pagination"></div> -->
@@ -69,24 +79,26 @@ import 'swiper/css/pagination'
 export default {
     name: 'CourseSlide',
     data: () => ({
-        size: 4
+        size: 4,
+        isSelected: 'all'
     }),
     methods: {
 
         setSize() {
             let currWidth = window.screen.width
-            if (currWidth <= 640)  {
+            if (currWidth <= 640) {
                 this.size = 1
-            }else if(currWidth >=640 && currWidth <= 820) {
+            } else if (currWidth >= 640 && currWidth <= 820) {
                 this.size = 2
-            }else if(currWidth >=820 && currWidth <= 920){
+            } else if (currWidth >= 820 && currWidth <= 920) {
                 this.size = 3
-            }else{
+            } else {
                 this.size = 4
             }
+        },
+        filterCourse(name){
+            this.isSelected = name
 
-           
-            
         }
     },
     created() {
@@ -129,9 +141,8 @@ export default {
 </script>
 
 <style scoped>
-
-.course_wrap{
-    position: relative ;
+.course_wrap {
+    position: relative;
     overflow: hidden;
 }
 
@@ -143,14 +154,15 @@ export default {
     width: 100%; */
     top: 0;
     left: 0;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .wavemob {
     display: none;
 }
+
 .swiper-slide {
     display: flex;
     justify-content: center;
@@ -204,10 +216,10 @@ export default {
     height: 28px;
     background-color: #FEF5E4;
     border-radius: 50%;
-    overflow: hidden ;
+    overflow: hidden;
 }
 
-.avatar img{
+.avatar img {
     width: 100%;
     object-fit: cover;
     /* display: none; */
@@ -218,12 +230,13 @@ export default {
 .price {
     min-width: 60px;
     min-height: 24px;
+    /* color: #8246b09b; */
     background: #DECEEA;
     border: 2px dashed #8246B0;
-
 }
 
-.swiper-button-prev{
+
+.swiper-button-prev {
     /* border: 1px solid black; */
     transform: translateX(-10px);
     width: 50px;
@@ -232,16 +245,17 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius:50% ;
+    border-radius: 50%;
     background: #DECEEA;
     padding: 5px;
 
 }
 
-.swiper-button-prev img{
+.swiper-button-prev img {
     transform: rotate(180deg);
 }
-.swiper-button-next{
+
+.swiper-button-next {
     /* border: 1px solid black; */
     padding: 5px;
     transform: translateX(10px);
@@ -250,28 +264,48 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius:50% ;
+    border-radius: 50%;
     width: 50px;
     height: 50px;
 
 }
-.swiper-button-prev::after{
+
+.swiper-button-prev::after {
     display: none;
 
 }
 
-.swiper-button-next::after{
+.swiper-button-next::after {
     display: none;
 
+}
+
+.btnc {
+    border-radius: 0 !important;
+}
+
+.selected {
+    background: #8246B0 !important;
+    color: white;
+}
+
+.notSelected {
+    color: #9118ed !important;
+    background: #8246b09b !important;
+}
+.notSelected:hover{
+    background: #8246B0 !important;
+    color: white !important;
+    transition: 0.6s;
 }
 
 @media (max-width: 640px) {
-.wave{
-    display: none;
-}
+    .wave {
+        display: none;
+    }
 
-.wavemob{
-    display: block;
+    .wavemob {
+        display: block;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -279,8 +313,6 @@ export default {
         width: 100%;
         /* height: 100%; */
         z-index: 0;
+    }
 }
-}
-
-
 </style>
