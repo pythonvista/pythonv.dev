@@ -101,7 +101,7 @@ export default {
 
 select {
     outline: none;
-    border-bottom: 1px solid #60109E;
+    border-bottom: 1px solid #60109E !important;
     color: black;
     padding: 0 0;
     font-size: 12px;
@@ -228,7 +228,7 @@ select option {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-bottom: 4px solid #60109E;
+        border-bottom: 10px solid #61109e53;
     }
 
     .wave {

@@ -1,5 +1,5 @@
 <template>
-    <div class="course_wrap xs:px-2 sm:px-2 md:px-7 lg:px-7 py-7  ">
+    <div class="course_wrap xs:px-2 sm:px-2 md:px-7 lg:px-7 py-4  ">
         <div>
             <img class="wave" src="@/assets/img/bg.svg" alt="">
             <img class="wavemob" src="@/assets/img/course-bg.svg" alt="">

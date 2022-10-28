@@ -1,9 +1,9 @@
 <template>
-    <div class="pro_wrap flex flex-col items-center justify-center py-6">
+    <div class="pro_wrap flex flex-col items-center justify-center px-3 py-3">
         <img class="wave" src="@/assets/img/bg.svg" alt="">
         <img class="wavemob" src="@/assets/img/course-bg.svg" alt="">
-        <p class="text-lx3 ma-0 pa-0 text-primary z-1">PythonV Pro</p>
-        <p class="ma-0 pa-0 text-base z-1">Access to every single course & added extras for just $9 a month</p>
+        <p class="text-lx3 ma-0 font-bold pa-0 text-primary z-1">PythonV Pro</p>
+        <p class="ma-0 pa-0 text-base text-center z-1">Access to every single course & added extras for just ₦2000 a month</p>
 
         <div class=" bundle mt-3 xs:col-span-3 sm:col-span-3 md:col-span-1 lg:col-span-1 flex flex-column  ">
             <div class="bundle_img ">
@@ -16,7 +16,7 @@
                         instant access
                         to all premium PythonV courses.</p>
                     <div class="price px-1 flex items-center justify-center">
-                        <span class="text-primary">₦1000/month</span>
+                        <span class="text-primary">₦2000/month</span>
                     </div>
                 </div>
             </div>
