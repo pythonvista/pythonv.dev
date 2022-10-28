@@ -3,7 +3,7 @@
         <img class="wave" src="@/assets/img/bg-right.svg" alt="">
         <img class="wavemob" src="@/assets/img/bgmob-right.svg" alt="">
         <div class="category_title flex flex-column ">
-            <div class="relative gap-3 mt-2 mb-2 flex xs:flex-col sm:flex-col md:flex-row lg:flex-row align-center">
+            <div class="relative gap-3 mt-2 mb-2 flex xs:flex-col sm:flex-col md:flex-col lg:flex-col align-center">
                 <p class="font-bold text-primary ma-0 pa-0">Popular Category For Learning</p>
 
                 <select
@@ -92,7 +92,8 @@ export default {
     /* display: flex;
     justify-content: start;
     align-items: center;  */
-    border-bottom: 2px solid #60109E;
+    /* border-bottom: 2px solid #60109E; */
+    border-bottom: 10px solid #61109e53;
     position: relative;
     overflow: hidden;
     background: #f9f9f9;

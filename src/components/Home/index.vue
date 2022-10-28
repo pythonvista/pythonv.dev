@@ -6,6 +6,7 @@
     <CourseSlider></CourseSlider>
     <BundleCourse></BundleCourse>
     <cohorts></cohorts>
+    <proplan></proplan>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import MinCategory from '@/components/Home/components/MinCategory.vue'
 import CourseSlider from '@/components/Home/components/CourseSlider.vue'
 import BundleCourse from '@/components/Home/components/BundleCourse.vue'
 import cohorts  from "@/components/Home/components/cohorts.vue"
+import proplan  from "@/components/Home/components/proplan.vue"
 export default {
     name: 'index',
     components:{
@@ -24,7 +26,8 @@ export default {
       MinCategory,
       CourseSlider,
       BundleCourse,
-      cohorts
+      cohorts,
+      proplan
     }
 }
 </script>

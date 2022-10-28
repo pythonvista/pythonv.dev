@@ -6,8 +6,8 @@
             <div class="category_title flex flex-column ">
 
                 <div
-                    class="relative  gap-3 mt-2 mb-2 flex xs:flex-col sm:flex-col md:flex-row lg:flex-row md:justify-between align-center">
-                    <p class="font-bold  ma-0 pa-0">Popular Courses</p>
+                    class="relative  gap-3 mt-2 mb-2 flex xs:flex-col sm:flex-col md:flex-col lg:flex-col md:center align-center">
+                    <p class="font-bold text-primary text-lg  ma-0 pa-0">Popular Courses</p>
                     <div class="flex gap-2">
                         <v-btn @click="filterCourse('all')" class="btnc"
                             :class="{ selected: isSelected == 'all', notSelected: isSelected != 'all' }" depressed
@@ -154,7 +154,8 @@ export default {
     overflow: hidden;
     /* height: 100vh; */
     margin: auto;
-    border-bottom: 2px solid #60109E;
+    /* border-bottom: 2px solid #60109E; */
+    border-bottom: 10px solid #61109e53;
 }
 
 .wave {

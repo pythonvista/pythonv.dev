@@ -70,7 +70,9 @@ export default {
 
 <style scoped>
 .cohort_wrap {
-    background: #D6CDDC;
+    background: #f9f9f9;
+    border-bottom: 10px solid #61109e53;
+    /* border-top: 10px solid #61109e53; */
 
 }
 
