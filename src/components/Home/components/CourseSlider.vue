@@ -1,70 +1,78 @@
 <template>
-    <div class="course_wrap xs:px-2 sm:px-2 md:px-7 lg:px-7  ">
-        <img class="wave" src="@/assets/img/bg.svg" alt="">
-        <img class="wavemob" src="@/assets/img/course-bg.svg" alt="">
-        <div class="category_title flex flex-column ">
+    <div class="course_wrap xs:px-2 sm:px-2 md:px-7 lg:px-7 py-7  ">
+        <div>
+            <img class="wave" src="@/assets/img/bg.svg" alt="">
+            <img class="wavemob" src="@/assets/img/course-bg.svg" alt="">
+            <div class="category_title flex flex-column ">
 
-            <div
-                class="relative  gap-3 mt-2 mb-2 flex xs:flex-col sm:flex-col md:flex-row lg:flex-row md:justify-between align-center">
-                <p class="font-bold  ma-0 pa-0">Popular Courses</p>
-                <div class="flex gap-2">
-                    <v-btn  @click="filterCourse('all')" class="btnc" :class="{ selected: isSelected == 'all', notSelected: isSelected != 'all' }" depressed
-                        x-small>All</v-btn>
-                    <v-btn  @click="filterCourse('courses')" class="btnc" :class="{ selected: isSelected == 'courses', notSelected: isSelected != 'courses' }" depressed
-                        x-small>Courses</v-btn>
-                    <v-btn  @click="filterCourse('cohorts')" class="btnc" :class="{selected: isSelected == 'cohorts', notSelected: isSelected != 'cohorts' }"  depressed x-small>Cohorts</v-btn>
-                    <v-btn @click="filterCourse('degree')" class="btnc" :class="{selected: isSelected == 'degree', notSelected: isSelected != 'degree' }"  depressed x-small>Degree</v-btn>
+                <div
+                    class="relative  gap-3 mt-2 mb-2 flex xs:flex-col sm:flex-col md:flex-row lg:flex-row md:justify-between align-center">
+                    <p class="font-bold  ma-0 pa-0">Popular Courses</p>
+                    <div class="flex gap-2">
+                        <v-btn @click="filterCourse('all')" class="btnc"
+                            :class="{ selected: isSelected == 'all', notSelected: isSelected != 'all' }" depressed
+                            x-small>All</v-btn>
+                        <v-btn @click="filterCourse('courses')" class="btnc"
+                            :class="{ selected: isSelected == 'courses', notSelected: isSelected != 'courses' }"
+                            depressed x-small>Courses</v-btn>
+                        <v-btn @click="filterCourse('cohorts')" class="btnc"
+                            :class="{ selected: isSelected == 'cohorts', notSelected: isSelected != 'cohorts' }"
+                            depressed x-small>Cohorts</v-btn>
+                        <v-btn @click="filterCourse('degree')" class="btnc"
+                            :class="{ selected: isSelected == 'degree', notSelected: isSelected != 'degree' }" depressed
+                            x-small>Degree</v-btn>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div ref="swiper" class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide" v-for="(n, index) in 9" :key="index">
-                    <div
-                        class="shadow-lg bg-white focus-within:shadow-md hover:shadow-2xl course_slide flex items-center flex-col ">
-                        <div class="course_img w-full">
-                            <img src="@/assets/img/course1.png" alt="">
-                        </div>
-                        <div class="course_content w-full flex flex-col ">
-                            <div class="course_info flex flex-col justify-center gap-1 pa-1">
-                                <p class="ma-0 pa-0 text-bold text-primary font-bold">Node JS Crash Course</p>
-                                <p class="ma-0 pa-0 text-xs">Learn how to make dynamic websites
-                                    using Node ja and firebase from ground.</p>
+            <div ref="swiper" class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide" v-for="(n, index) in 9" :key="index">
+                        <div
+                            class="shadow bg-white focus-within:shadow-md hover:shadow-md course_slide flex items-center flex-col ">
+                            <div class="course_img w-full">
+                                <img src="@/assets/img/course1.png" alt="">
                             </div>
-                            <div class="course_price flex flex-row justify-between items-center ">
-                                <div class="flex flex-row items-center gap-1">
-                                    <div class="avatar">
-                                        <img src="@/assets/img/avatar.png" alt="">
-                                    </div>
-                                    <div class="avatar_name">
-                                        <p class="ma-0 pa-0 text-xs">Emeter Victor</p>
-                                    </div>
+                            <div class="course_content w-full flex flex-col ">
+                                <div class="course_info flex flex-col justify-center gap-1 pa-1">
+                                    <p class="ma-0 pa-0 text-bold text-primary font-bold">Node JS Crash Course</p>
+                                    <p class="ma-0 pa-0 text-xs">Learn how to make dynamic websites
+                                        using Node ja and firebase from ground.</p>
                                 </div>
+                                <div class="course_price flex flex-row justify-between items-center ">
+                                    <div class="flex flex-row items-center gap-1">
+                                        <div class="avatar">
+                                            <img src="@/assets/img/avatar.png" alt="">
+                                        </div>
+                                        <div class="avatar_name">
+                                            <p class="ma-0 pa-0 text-xs">Emeter Victor</p>
+                                        </div>
+                                    </div>
 
-                                <div class="price flex items-center justify-center">
-                                    <span class="text-primary">₦{{ 5000 }}</span>
+                                    <div class="price flex items-center justify-center">
+                                        <span class="text-primary">₦{{ 5000 }}</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                </div>
+                <!-- If we need pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev">
+                    <img src="@/assets/icons/next.png" alt="">
+                </div>
+                <div class="swiper-button-next">
+                    <img src="@/assets/icons/next.png" alt="">
                 </div>
 
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
             </div>
-            <!-- If we need pagination -->
-            <!-- <div class="swiper-pagination"></div> -->
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev">
-                <img src="@/assets/icons/next.png" alt="">
-            </div>
-            <div class="swiper-button-next">
-                <img src="@/assets/icons/next.png" alt="">
-            </div>
-
-            <!-- If we need scrollbar -->
-            <!-- <div class="swiper-scrollbar"></div> -->
         </div>
 
     </div>
@@ -96,7 +104,7 @@ export default {
                 this.size = 4
             }
         },
-        filterCourse(name){
+        filterCourse(name) {
             this.isSelected = name
 
         }
@@ -144,6 +152,9 @@ export default {
 .course_wrap {
     position: relative;
     overflow: hidden;
+    /* height: 100vh; */
+    margin: auto;
+    border-bottom: 2px solid #60109E;
 }
 
 .wave {
@@ -293,7 +304,8 @@ export default {
     color: #9118ed !important;
     background: #8246b09b !important;
 }
-.notSelected:hover{
+
+.notSelected:hover {
     background: #8246B0 !important;
     color: white !important;
     transition: 0.6s;

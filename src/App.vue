@@ -3,22 +3,6 @@
     <v-main>
       <router-view />
     </v-main>
-    <v-bottom-navigation v-show="nav" class="bottom-nav md:hidden ma-0 pa-0" color="indigo">
-      <div class="w-full h-full flex justify-around align-center ma-0 pa-0">
-        <v-btn color="transparent" class="flex-1 ">
-          <v-icon>mdi-home</v-icon>
-        </v-btn>
-        <v-btn color="transparent" class="flex-1">
-          <v-icon>mdi-account</v-icon>
-        </v-btn>
-        <v-btn color="transparent" class="flex-1">
-          <v-icon>mdi-login</v-icon>
-        </v-btn>
-        <v-btn color="transparent" class="flex-1">
-          <v-icon>mdi-logout</v-icon>
-        </v-btn>
-      </div>
-    </v-bottom-navigation>
   </v-app>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="category_wrap px-7 py-3 ">
+    <div class="category_wrap px-7 py-7 ">
         <img class="wave" src="@/assets/img/bg-right.svg" alt="">
         <img class="wavemob" src="@/assets/img/bgmob-right.svg" alt="">
         <div class="category_title flex flex-column ">
@@ -92,7 +92,7 @@ export default {
     /* display: flex;
     justify-content: start;
     align-items: center;  */
-    border-bottom: 4px solid #60109E;
+    border-bottom: 2px solid #60109E;
     position: relative;
     overflow: hidden;
     background: #f9f9f9;
